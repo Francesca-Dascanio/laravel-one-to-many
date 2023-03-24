@@ -32,7 +32,8 @@ class StoreProjectRequest extends FormRequest
             'year' => 'required | numeric | min: 1930 | max: 2030',
             'description' => 'nullable',
             'img' => 'nullable | image | max: 2048',
-            'type_id' => 'nullable | exists:types, id'
+            'type' => 'nullable | exists:types,id'
+            // NO SPAZIO exists:type,id
             // Mettere comunque anche colonne nullable affinchè vengano salvati i dati - al file max: 2048 sta per 2Megabyte (1024 Kilobyte = 1 Megabyte)
         ];
     }

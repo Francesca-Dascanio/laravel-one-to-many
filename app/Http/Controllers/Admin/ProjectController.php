@@ -58,9 +58,9 @@ class ProjectController extends Controller
      */
     public function store(StoreProjectRequest $request)
     {
+        
         // Creo variabile data con request validata
         $data = $request->validated();
-        // dd($data);
 
         // Se file esiste, allora prendi path da inserire in DB
         if (array_key_exists('img', $data)) {
