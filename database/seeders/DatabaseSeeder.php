@@ -22,8 +22,9 @@ class DatabaseSeeder extends Seeder
         // ]);
 
     //  PERCHE' DEVO FARLO?
-    //     $this->call([
-    //         ProjectSeeder::class
-    //     ]);
+        $this->call([
+            TypeSeeder::class,
+            ProjectSeeder::class
+        ]);
     }
 }
