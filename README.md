@@ -21,9 +21,9 @@ I task da svolgere sono diversi, ma alcuni di essi sono un ripasso di ciò che a
 - aggiungere ai model Type e Project i metodi per definire la relazione one to many OK
 
 CRUD
-- visualizzare nella pagina di dettaglio di un progetto la tipologia associata, se presente
-- permettere all'utente di associare una tipologia nella pagina di creazione e modifica di un progetto
-- gestire il salvataggio dell'associazione progetto-tipologia con opportune regole di validazione
+- visualizzare nella pagina di dettaglio di un progetto la tipologia associata, se presente OK
+- permettere all'utente di associare una tipologia nella pagina di creazione e modifica di un progetto OK
+- gestire il salvataggio dell'associazione progetto-tipologia con opportune regole di validazione OK
 Bonus 1:
 creare il seeder per il model Type.
 Bonus 2:
