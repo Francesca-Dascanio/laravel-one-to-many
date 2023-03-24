@@ -29,6 +29,15 @@
                 <input type="number" class="form-control" name="year" id="year" required min="1970" max="2030" value="{{ old('year', $project->year) }}" placeholder="Write when you have worked on the project...">
             </div>
             <div class="mb-3">
+                <label for="type_id" class="form-label">Type of the project</label>
+                <select class="form-select" aria-label="Default select example" name="type_id" id="type_id">
+                    <option value="">Not specified</option>
+                    @foreach ($types as $type)
+                        <option value="{{ $type->id }}" {{ old('type_id', $project->type_id) == $type->id ? 'selected' : '' }}>{{ $type->name }}</option>
+                    @endforeach
+                  </select>
+            </div>
+            <div class="mb-3">
                 {{-- Se c'è immagine precedente la mostro insieme al checkbox --}}
                 @if ($project->img)
                     <img src="{{ asset('storage/'.$project->img) }}" alt="{{ $project->title }}" style="height: 300px" class="d-block">

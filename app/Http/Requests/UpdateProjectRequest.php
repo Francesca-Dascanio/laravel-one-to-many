@@ -31,6 +31,7 @@ class UpdateProjectRequest extends FormRequest
             'img' => 'nullable | image | max: 2048',
             'delete_img' => 'nullable',
             'description' => 'nullable',
+            'type_id' => 'nullable | exists:types,id'
             
         ];
     }
