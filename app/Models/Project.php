@@ -15,7 +15,8 @@ class Project extends Model
         'slug',
         'year',
         'description',
-        'img'
+        'img',
+        'type_id'
     ];
 
     public function type() {

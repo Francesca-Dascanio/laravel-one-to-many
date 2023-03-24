@@ -27,20 +27,20 @@
         <div class="project">
             <div class="card text-center">
                 <div class="card-header">
-                    {{ $project->title }}
+                    Title: {{ $project->title }}
                 </div>
                 <div class="card-body">
                     @if ($project->img)
                         <img class="card-img-top" src="{{ asset('storage/'.$project->img) }}" alt="Image">
                     @endif
                     <h5 class="card-title">
-                        {{ $project->slug }}
+                        Slug: {{ $project->slug }}
                     </h5>
                     <h5>
-                        {{ $project->type->name }}
+                        Type: {{ $project->type ? $project->type->name : 'Not-specified' }}
                     </h5>
                     <p class="card-text">
-                        {{ $project->description }}
+                        Description: {{ $project->description }}
                     </p>
                 </div>
                 <div class="card-footer text-muted">

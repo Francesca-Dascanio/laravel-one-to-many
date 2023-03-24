@@ -25,7 +25,7 @@ class StoreTypeRequest extends FormRequest
     {
         return [
                                 // validazione se esiste nella tabella types la colonna id
-            'type' => 'nullable | exists:types, id'
+            'type_id' => 'nullable | exists:types, id'
         ];
     }
 }
