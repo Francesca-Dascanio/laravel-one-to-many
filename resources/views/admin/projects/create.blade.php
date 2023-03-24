@@ -42,11 +42,11 @@
                 <input type="number" class="form-control" name="year" id="year" value="{{ old('year') }}"required min="1970" max="2030" placeholder="Write when you have worked on the project...">
             </div>
             <div class="mb-3">
-                <label for="type" class="form-label">Type of the project</label>
-                <select class="form-select" aria-label="Default select example" name="type" id="type">
+                <label for="type_id" class="form-label">Type of the project</label>
+                <select class="form-select" aria-label="Default select example" name="type_id" id="type_id">
                     <option value="">Not specified</option>
                     @foreach ($types as $type)
-                        <option value="{{ $type->id }}" {{ old('type') == $type->id ? 'selected' : '' }}>{{ $type->name }}</option>
+                        <option value="{{ $type->id }}" {{ old('type_id') == $type->id ? 'selected' : '' }}>{{ $type->name }}</option>
                     @endforeach
                   </select>
             </div>
