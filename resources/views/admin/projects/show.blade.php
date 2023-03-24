@@ -36,6 +36,9 @@
                     <h5 class="card-title">
                         {{ $project->slug }}
                     </h5>
+                    <h5>
+                        {{ $project->type->name }}
+                    </h5>
                     <p class="card-text">
                         {{ $project->description }}
                     </p>

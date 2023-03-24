@@ -10,6 +10,7 @@ use App\Http\Requests\UpdateProjectRequest;
 
 // Models
 use App\Models\Project;
+use App\Models\Type;
 
 // Facade
 use Illuminate\Support\Facades\Storage;
@@ -27,10 +28,12 @@ class ProjectController extends Controller
      */
     public function index()
     {
+        $types = Type::all();
         $projects = Project::all();
         
         return view('admin.projects.index', [
-            'projects' => $projects
+            'projects' => $projects,
+            'types' => $types 
         ]);
     }
 
@@ -41,7 +44,10 @@ class ProjectController extends Controller
      */
     public function create()
     {
-        return view('admin.projects.create');
+        $types = Type::all();
+        return view('admin.projects.create', [
+            'types' => $types
+        ]);
     }
 
     /**
@@ -54,6 +60,7 @@ class ProjectController extends Controller
     {
         // Creo variabile data con request validata
         $data = $request->validated();
+        dd($data);
 
         // Se file esiste, allora prendi path da inserire in DB
         if (array_key_exists('img', $data)) {
@@ -78,6 +85,8 @@ class ProjectController extends Controller
      */
     public function show(Project $project)
     {
+
+
         return view('admin.projects.show', [
             'project' => $project
         ]);

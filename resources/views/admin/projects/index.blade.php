@@ -47,6 +47,16 @@
                         <td>
                             {{ $project->slug }}
                         </td>
+                        {{-- @if ($project->type->name)
+                            <td>
+                                {{ $project->type->name }}
+                            </td>
+                        @else
+                            <td>
+                                None
+                            </td>
+                        @endif --}}
+
                         <td>
                             {{ $project->year }}
                         </td>

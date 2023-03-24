@@ -42,6 +42,15 @@
                 <input type="number" class="form-control" name="year" id="year" value="{{ old('year') }}"required min="1970" max="2030" placeholder="Write when you have worked on the project...">
             </div>
             <div class="mb-3">
+                <label for="type" class="form-label">Type of the project</label>
+                <select class="form-select" aria-label="Default select example" name="type">
+                    <option selected>Not specified</option>
+                    @foreach ($types as $type)
+                        <option value="{{ $type->id }}" {{ old('type_id') == $type->id ? 'selected' : '' }}>{{ $type->name }}</option>
+                    @endforeach
+                  </select>
+            </div>
+            <div class="mb-3">
                 {{-- Aggiungo type=file e accept (togliere value perchè non tiene old) --}}
                 <label for="img" class="form-label">File (image)</label>
                 <input type="file" class="form-control" name="img" id="img" accept="image/*">
