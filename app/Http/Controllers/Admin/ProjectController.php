@@ -60,7 +60,7 @@ class ProjectController extends Controller
     {
         // Creo variabile data con request validata
         $data = $request->validated();
-        dd($data);
+        // dd($data);
 
         // Se file esiste, allora prendi path da inserire in DB
         if (array_key_exists('img', $data)) {
