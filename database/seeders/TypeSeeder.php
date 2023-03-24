@@ -31,11 +31,10 @@ class TypeSeeder extends Seeder
 
          // Inserisco dati in DB
          foreach ($types as $type) {
-             $singleType = new Type();
-             $singleType->name = $type['name'];
-            //  Così si genera slug in automatico
-             $singleType->slug = Str::slug($type);
-             $singleType->save();
+             $singleType = Type::create([
+                'name' => $type,
+                'slug' => Str::slug($type)
+             ]);
          }
     }
 }
